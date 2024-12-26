@@ -1,0 +1,3 @@
+# C++ Vector data() Pointer Invalidation
+This code demonstrates a common error when using `std::vector::data()` in C++.  The example showcases how modifying a vector after obtaining a pointer to its underlying data using `data()` can lead to undefined behavior because the vector may reallocate its internal storage, thus invalidating the pointer.
+The `bug.cpp` file contains the erroneous code, while `bugSolution.cpp` provides a corrected version. The solution avoids directly manipulating the vector's internal storage.  Instead, it uses iterators or range-based for loops which are safer.
